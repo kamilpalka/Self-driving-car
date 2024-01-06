@@ -20,6 +20,7 @@ class Sensor {
   #getReading(ray, roadBorders) {
     let touches = [];
 
+    // check if sensor touches other elements
     for (let i = 0; i < roadBorders.length; i++) {
       const touch = getIntersection(
         ray[0],
