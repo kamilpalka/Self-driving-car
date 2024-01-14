@@ -15,7 +15,7 @@ class NeuralNetwork {
   }
 }
 
-class level {
+class Level {
   constructor(inputCount, outputCount) {
     this.inputs = new Array(inputCount);
     this.outputs = new Array(outputCount);
@@ -26,7 +26,7 @@ class level {
       this.weights[i] = new Array(outputCount);
     }
 
-    level.#randomize(this);
+    Level.#randomize(this);
   }
 
   static #randomize(level) {
@@ -46,7 +46,7 @@ class level {
       level.inputs[i] = givenInputs[i];
     }
 
-    for (let i = 0; i < level.output.length; i++) {
+    for (let i = 0; i < level.outputs.length; i++) {
       let sum = 0;
       for (let j = 0; j < level.inputs.length; j++) {
         sum += level.inputs[j] * level.weights[j][i];
